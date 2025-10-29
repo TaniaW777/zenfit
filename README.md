@@ -1,32 +1,60 @@
-# Zenfit 🧘‍♀️💪
+# Zenfit
 
 A smart fitness tracking application with AI-powered predictions and insights.
 
+## Overview
+
+Zenfit is a comprehensive health and fitness tracking platform that combines workout logging, nutrition tracking, and machine learning to provide users with personalized insights and predictions about their fitness journey.
+
 ## Features
 
-- 📊 Track workouts and exercises
-- 🍎 Log nutrition and calories
-- 📈 Visualize progress with interactive charts
-- 🤖 AI-powered weight predictions
-- 🎯 Goal achievement probability calculator
-- 💡 Personalized workout recommendations
+**Core Functionality:**
+- Track workouts with detailed exercise logging (sets, reps, weight, duration)
+- Log nutrition and monitor calorie intake
+- Visualize progress with interactive charts and analytics
+- Set and monitor fitness goals
+
+**AI-Powered Features:**
+- Weight prediction based on historical data and trends
+- Goal achievement probability calculator
+- Personalized workout recommendations
+- Anomaly detection for unusual patterns
 
 ## Tech Stack
 
 **Frontend:**
 - React
 - Tailwind CSS
-- Recharts
+- Recharts for data visualization
 
 **Backend:**
 - Python Flask
-- PostgreSQL
-- scikit-learn (ML)
+- PostgreSQL database
+- SQLAlchemy ORM
+- scikit-learn for machine learning models
+
+**Development Tools:**
+- Git for version control
+- RESTful API architecture
 
 ## Project Status
 
-🚧 Currently in development - Phase 1
+Currently in active development - Phase 1: Backend foundation and authentication system.
+
+## Roadmap
+
+- [x] Project setup and configuration
+- [ ] User authentication system
+- [ ] Workout logging functionality
+- [ ] Nutrition tracking
+- [ ] Data visualization dashboard
+- [ ] Machine learning model integration
+- [ ] Deployment
 
 ## Author
 
-Built  by Filomene Tania as part of my Data Science & Full-Stack Development portfolio.
+Developed by Tania W. as part of my Computer Science portfolio, demonstrating full-stack development and data science capabilities.
+
+## License
+
+This project is available for portfolio and educational purposes.
