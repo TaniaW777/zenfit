@@ -1,16 +1,29 @@
+from backend.routes.workouts import workouts_bp
+from backend.routes.auth import auth_bp
+from backend.models import user
+from backend.utils import init_bcrypt
 from flask import Flask
 from flask_cors import CORS
-from flask_sqlalchemy import SQLAlchemy
 from backend.config import Config
+from backend.database import db
 
 app = Flask(__name__)
 app.config.from_object(Config)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
 
 # Initialize database
-db = SQLAlchemy(app)
+db.init_app(app)
 
-# Route de test
+# Initialize Bcrypt
+init_bcrypt(app)
+
+# Import models
+
+# Import et enregistrer les blueprints
+app.register_blueprint(auth_bp, url_prefix='/api/auth')
+app.register_blueprint(workouts_bp, url_prefix='/api/workouts')
+
+# Routes de test
 
 
 @app.route('/')
