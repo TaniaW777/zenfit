@@ -32,4 +32,27 @@ export const authAPI = {
     },
 };
 
+// Fonctions workouts
+export const workoutsAPI = {
+    getAll: async () => {
+        const response = await api.get('/workouts/');
+        return response.data;
+    },
+
+    getOne: async (id) => {
+        const response = await api.get(`/workouts/${id}`);
+        return response.data;
+    },
+
+    create: async (workoutData) => {
+        const response = await api.post('/workouts/', workoutData);
+        return response.data;
+    },
+
+    delete: async (id) => {
+        const response = await api.delete(`/workouts/${id}`);
+        return response.data;
+    },
+};
+
 export default api;

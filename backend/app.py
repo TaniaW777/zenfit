@@ -9,7 +9,8 @@ from backend.database import db
 
 app = Flask(__name__)
 app.config.from_object(Config)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
+CORS(app, resources={
+     r"/api/*": {"origins": ["http://localhost:5173", "http://localhost:5174"]}})
 
 # Initialize database
 db.init_app(app)

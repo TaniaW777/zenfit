@@ -44,16 +44,19 @@ function Dashboard() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                    <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center border border-teal-100 hover:shadow-lg transition">
+                    <div
+                        onClick={() => navigate('/workouts')}
+                        className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center border border-teal-100 hover:shadow-lg transition cursor-pointer hover:border-teal-300"
+                    >
                         <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
                             <span className="text-2xl">💪</span>
                         </div>
                         <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">Workouts</h3>
-                        <p className="text-2xl sm:text-3xl font-bold text-teal-600">0</p>
-                        <p className="text-gray-500 text-xs sm:text-sm">Coming soon!</p>
+                        <p className="text-2xl sm:text-3xl font-bold text-teal-600">Track Now</p>
+                        <p className="text-gray-500 text-xs sm:text-sm mt-2">Click to manage workouts</p>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center border border-emerald-100 hover:shadow-lg transition">
+                    <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center border border-emerald-100 hover:shadow-lg transition opacity-60">
                         <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-3">
                             <span className="text-2xl">🥗</span>
                         </div>
@@ -62,7 +65,7 @@ function Dashboard() {
                         <p className="text-gray-500 text-xs sm:text-sm">Coming soon!</p>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center border border-indigo-100 hover:shadow-lg transition sm:col-span-2 lg:col-span-1">
+                    <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center border border-indigo-100 hover:shadow-lg transition opacity-60 sm:col-span-2 lg:col-span-1">
                         <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
                             <span className="text-2xl">📈</span>
                         </div>

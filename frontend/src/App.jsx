@@ -3,6 +3,9 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import WorkoutsList from './pages/WorkoutsList';
+import AddWorkout from './pages/AddWorkout';
+import WorkoutDetails from './pages/WorkoutDetails';
 
 // Composant pour protéger les routes
 function ProtectedRoute({ children }) {
@@ -22,6 +25,30 @@ function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/workouts"
+            element={
+              <ProtectedRoute>
+                <WorkoutsList />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/workouts/add"
+            element={
+              <ProtectedRoute>
+                <AddWorkout />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/workouts/:id"
+            element={
+              <ProtectedRoute>
+                <WorkoutDetails />
               </ProtectedRoute>
             }
           />
