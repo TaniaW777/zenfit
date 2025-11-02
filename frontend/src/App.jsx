@@ -6,7 +6,9 @@ import Dashboard from './pages/Dashboard';
 import WorkoutsList from './pages/WorkoutsList';
 import AddWorkout from './pages/AddWorkout';
 import WorkoutDetails from './pages/WorkoutDetails';
-
+import MealsList from './pages/MealsList';
+import AddMeal from './pages/AddMeal';
+import MealDetails from './pages/MealDetails';
 // Composant pour protéger les routes
 function ProtectedRoute({ children }) {
   const { token } = useAuth();
@@ -18,6 +20,30 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          <Route
+            path="/nutrition"
+            element={
+              <ProtectedRoute>
+                <MealsList />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/nutrition/add"
+            element={
+              <ProtectedRoute>
+                <AddMeal />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/nutrition/:id"
+            element={
+              <ProtectedRoute>
+                <MealDetails />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route

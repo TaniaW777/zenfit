@@ -1,4 +1,5 @@
 from backend.routes.workouts import workouts_bp
+from backend.routes.nutrition import nutrition_bp
 from backend.routes.auth import auth_bp
 from backend.models import user
 from backend.utils import init_bcrypt
@@ -23,7 +24,7 @@ init_bcrypt(app)
 # Import et enregistrer les blueprints
 app.register_blueprint(auth_bp, url_prefix='/api/auth')
 app.register_blueprint(workouts_bp, url_prefix='/api/workouts')
-
+app.register_blueprint(nutrition_bp, url_prefix='/api/nutrition')
 # Routes de test
 
 

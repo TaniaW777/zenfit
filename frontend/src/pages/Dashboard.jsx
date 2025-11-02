@@ -56,13 +56,16 @@ function Dashboard() {
                         <p className="text-gray-500 text-xs sm:text-sm mt-2">Click to manage workouts</p>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center border border-emerald-100 hover:shadow-lg transition opacity-60">
+                    <div
+                        onClick={() => navigate('/nutrition')}
+                        className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center border border-emerald-100 hover:shadow-lg transition cursor-pointer hover:border-emerald-300"
+                    >
                         <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-3">
                             <span className="text-2xl">🥗</span>
                         </div>
                         <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">Nutrition</h3>
-                        <p className="text-2xl sm:text-3xl font-bold text-emerald-600">0</p>
-                        <p className="text-gray-500 text-xs sm:text-sm">Coming soon!</p>
+                        <p className="text-2xl sm:text-3xl font-bold text-emerald-600">Track Now</p>
+                        <p className="text-gray-500 text-xs sm:text-sm mt-2">Click to manage meals</p>
                     </div>
 
                     <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-center border border-indigo-100 hover:shadow-lg transition opacity-60 sm:col-span-2 lg:col-span-1">

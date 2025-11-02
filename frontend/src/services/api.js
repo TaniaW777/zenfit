@@ -54,5 +54,33 @@ export const workoutsAPI = {
         return response.data;
     },
 };
+// Fonctions nutrition
+export const nutritionAPI = {
+    getAll: async (date) => {
+        const params = date ? `?date=${date}` : '';
+        const response = await api.get(`/nutrition/${params}`);
+        return response.data;
+    },
 
+    getOne: async (id) => {
+        const response = await api.get(`/nutrition/${id}`);
+        return response.data;
+    },
+
+    create: async (mealData) => {
+        const response = await api.post('/nutrition/', mealData);
+        return response.data;
+    },
+
+    delete: async (id) => {
+        const response = await api.delete(`/nutrition/${id}`);
+        return response.data;
+    },
+
+    getDailySummary: async (date) => {
+        const params = date ? `?date=${date}` : '';
+        const response = await api.get(`/nutrition/daily-summary${params}`);
+        return response.data;
+    },
+};
 export default api;
