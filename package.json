@@ -19,8 +19,9 @@
     "vite": "^8.0.1"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "cd frontend && vite",
+    "build": "cd frontend && vite build",
+    "preview": "cd frontend && vite preview",
     "lint": "eslint frontend/",
     "test": "jest"
   }
